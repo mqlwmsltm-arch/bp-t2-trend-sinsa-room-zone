@@ -1,418 +1,416 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-night-electric">
-    <title>트렌드 | 서울 주요 유흥 상권 정보 및 밤의 환승 지도</title>
-    <meta name="description" content="서울 주요 상권(강남, 여의도, 마포 등)의 유흥 상권 정보를 환승 노선도 콘셉트로 쉽게 풀어낸 트렌드 분석 리포트입니다.">
-    <meta name="keywords" content="유흥 상권 정보, 서울 상권 분석, 강남 상권, 여의도 상권, 업종별 비교">
-    <link rel="canonical" href="https://trend.sinsa-room-zone.xyz/blog-3.html">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="트렌드 | 서울 주요 유흥 상권 정보 및 밤의 환승 지도">
-    <meta property="og:description" content="서울 주요 상권(강남, 여의도, 마포 등)의 유흥 상권 정보를 환승 노선도 콘셉트로 쉽게 풀어낸 트렌드 분석 리포트입니다.">
-    <meta property="og:url" content="https://trend.sinsa-room-zone.xyz/blog-3.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>트렌드 | 서울 주요 유흥 상권 정보 및 밤의 환승 지도</title>
+ <meta name="description" content="서울 주요 상권(강남, 여의도, 마포 등)의 유흥 상권 정보를 환승 노선도 콘셉트로 쉽게 풀어낸 트렌드 분석 리포트입니다.">
+ <meta name="keywords" content="유흥 상권 정보, 서울 상권 분석, 강남 상권, 여의도 상권, 업종별 비교">
+ <link rel="canonical" href="https://trend.sinsa-room-zone.xyz/blog-3.html">
+ 
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="트렌드 | 서울 주요 유흥 상권 정보 및 밤의 환승 지도">
+ <meta property="og:description" content="서울 주요 상권(강남, 여의도, 마포 등)의 유흥 상권 정보를 환승 노선도 콘셉트로 쉽게 풀어낸 트렌드 분석 리포트입니다.">
+ <meta property="og:url" content="https://trend.sinsa-room-zone.xyz/blog-3.html">
 
-    <style>
-        :root {
-            --bg-color: #07090e;
-            --surface-color: #121620;
-            --primary-color: #00ffcc; /* Electric Cyan */
-            --secondary-color: #ff007f; /* Neon Pink */
-            --text-color: #b0b5c6;
-            --text-bright: #ffffff;
-            --border-color: #00ffcc;
-            --border-width: 3px;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            line-height: 1.7;
-            padding: 20px;
-        }
-        .x-side-vjq9 {
-            max-width: 1100px;
-            margin: 0 auto;
-            border: var(--border-width) solid var(--border-color);
-            background: var(--surface-color);
-            box-shadow: 12px 12px 0px var(--secondary-color);
-            padding: 40px;
-        }
-        .v-head-qopo {
-            border-bottom: var(--border-width) solid var(--border-color);
-            padding-bottom: 25px;
-            margin-bottom: 35px;
-        }
-        .v-head-qopo-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .t-card-cjla {
-            background: #000;
-            border: 2px solid var(--secondary-color);
-            padding: 12px 24px;
-            display: inline-block;
-            transform: rotate(-1.5deg);
-        }
-        .t-card-cjla span {
-            color: var(--primary-color);
-            font-weight: 900;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-        .n-nav-6u62 {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .n-nav-6u62-link {
-            color: var(--text-bright);
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 2px solid var(--text-bright);
-            font-weight: bold;
-            font-size: 0.95rem;
-            transition: all 0.2s ease-in-out;
-        }
-        .n-nav-6u62-link:hover, .n-nav-6u62-link.active {
-            background: var(--primary-color);
-            color: #000;
-            border-color: var(--primary-color);
-            box-shadow: 5px 5px 0px var(--secondary-color);
-            transform: translate(-2px, -2px);
-        }
-        
-        /* Content Layout */
-        .intro-text {
-            font-size: 1.15rem;
-            margin-bottom: 30px;
-            color: var(--text-bright);
-            line-height: 1.8;
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 15px;
-        }
-        
-        .transit-map-box {
-            background: #000;
-            border: 3px solid var(--secondary-color);
-            padding: 30px;
-            margin: 40px 0;
-            position: relative;
-        }
-        .transit-map-box::before {
-            content: 'SEOUL NIGHT TRANSIT MAP';
-            position: absolute;
-            top: -15px;
-            right: 25px;
-            background: var(--primary-color);
-            color: #000;
-            font-size: 0.8rem;
-            font-weight: 900;
-            padding: 3px 10px;
-            letter-spacing: 1px;
-        }
-        .transit-line {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .transit-line:last-child {
-            margin-bottom: 0;
-        }
-        .line-badge {
-            background: var(--primary-color);
-            color: #000;
-            font-weight: bold;
-            padding: 5px 10px;
-            font-size: 0.85rem;
-            min-width: 100px;
-            text-align: center;
-        }
-        .line-badge.pink {
-            background: var(--secondary-color);
-            color: #fff;
-        }
-        .station {
-            background: var(--surface-color);
-            border: 1px solid var(--text-color);
-            padding: 5px 12px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--text-bright);
-        }
-        .arrow {
-            color: var(--primary-color);
-            font-weight: bold;
-        }
+ <style>
+ :root {
+ --bg-color: #07090e;
+ --surface-color: #121620;
+ --primary-color: #00ffcc; /* Electric Cyan */
+ --secondary-color: #ff007f; /* Neon Pink */
+ --text-color: #b0b5c6;
+ --text-bright: #ffffff;
+ --border-color: #00ffcc;
+ --border-width: 3px;
+ }
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ body {
+ background-color: var(--bg-color);
+ color: var(--text-color);
+ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+ line-height: 1.7;
+ padding: 20px;
+ }
+ .x-side-vjq9 {
+ max-width: 1100px;
+ margin: 0 auto;
+ border: var(--border-width) solid var(--border-color);
+ background: var(--surface-color);
+ box-shadow: 12px 12px 0px var(--secondary-color);
+ padding: 40px;
+ }
+ .v-head-qopo {
+ border-bottom: var(--border-width) solid var(--border-color);
+ padding-bottom: 25px;
+ margin-bottom: 35px;
+ }
+ .v-head-qopo-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 20px;
+ }
+ .t-card-cjla {
+ background: #000;
+ border: 2px solid var(--secondary-color);
+ padding: 12px 24px;
+ display: inline-block;
+ transform: rotate(-1.5deg);
+ }
+ .t-card-cjla span {
+ color: var(--primary-color);
+ font-weight: 900;
+ font-size: 1.6rem;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ }
+ .n-nav-6u62 {
+ display: flex;
+ gap: 12px;
+ flex-wrap: wrap;
+ }
+ .n-nav-6u62-link {
+ color: var(--text-bright);
+ text-decoration: none;
+ padding: 10px 20px;
+ border: 2px solid var(--text-bright);
+ font-weight: bold;
+ font-size: 0.95rem;
+ transition: all 0.2s ease-in-out;
+ }
+ .n-nav-6u62-link:hover, .n-nav-6u62-link.active {
+ background: var(--primary-color);
+ color: #000;
+ border-color: var(--primary-color);
+ box-shadow: 5px 5px 0px var(--secondary-color);
+ transform: translate(-2px, -2px);
+ }
+ 
+ /* Content Layout */
+ .intro-text {
+ font-size: 1.15rem;
+ margin-bottom: 30px;
+ color: var(--text-bright);
+ line-height: 1.8;
+ border-left: 4px solid var(--secondary-color);
+ padding-left: 15px;
+ }
+ 
+ .transit-map-box {
+ background: #000;
+ border: 3px solid var(--secondary-color);
+ padding: 30px;
+ margin: 40px 0;
+ position: relative;
+ }
+ .transit-map-box::before {
+ content: 'SEOUL NIGHT TRANSIT MAP';
+ position: absolute;
+ top: -15px;
+ right: 25px;
+ background: var(--primary-color);
+ color: #000;
+ font-size: 0.8rem;
+ font-weight: 900;
+ padding: 3px 10px;
+ letter-spacing: 1px;
+ }
+ .transit-line {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ margin-bottom: 20px;
+ flex-wrap: wrap;
+ }
+ .transit-line:last-child {
+ margin-bottom: 0;
+ }
+ .line-badge {
+ background: var(--primary-color);
+ color: #000;
+ font-weight: bold;
+ padding: 5px 10px;
+ font-size: 0.85rem;
+ min-width: 100px;
+ text-align: center;
+ }
+ .line-badge.pink {
+ background: var(--secondary-color);
+ color: #fff;
+ }
+ .station {
+ background: var(--surface-color);
+ border: 1px solid var(--text-color);
+ padding: 5px 12px;
+ font-size: 0.9rem;
+ font-weight: bold;
+ color: var(--text-bright);
+ }
+ .arrow {
+ color: var(--primary-color);
+ font-weight: bold;
+ }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 35px;
-        }
-        .brutal-card {
-            background: #161b26;
-            border: 2px solid var(--text-bright);
-            padding: 25px;
-            box-shadow: 6px 6px 0px var(--primary-color);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .brutal-card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 10px 10px 0px var(--secondary-color);
-        }
-        .brutal-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.35rem;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 8px;
-        }
-        .brutal-card p {
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        .brutal-badge {
-            display: inline-block;
-            background: var(--secondary-color);
-            color: #fff;
-            padding: 3px 8px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+ .grid-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 25px;
+ margin-top: 35px;
+ }
+ .brutal-card {
+ background: #161b26;
+ border: 2px solid var(--text-bright);
+ padding: 25px;
+ box-shadow: 6px 6px 0px var(--primary-color);
+ transition: transform 0.2s, box-shadow 0.2s;
+ }
+ .brutal-card:hover {
+ transform: translate(-4px, -4px);
+ box-shadow: 10px 10px 0px var(--secondary-color);
+ }
+ .brutal-card h3 {
+ color: var(--primary-color);
+ margin-bottom: 15px;
+ font-size: 1.35rem;
+ border-bottom: 2px solid var(--secondary-color);
+ padding-bottom: 8px;
+ }
+ .brutal-card p {
+ font-size: 0.95rem;
+ margin-bottom: 15px;
+ }
+ .brutal-badge {
+ display: inline-block;
+ background: var(--secondary-color);
+ color: #fff;
+ padding: 3px 8px;
+ font-size: 0.75rem;
+ font-weight: bold;
+ margin-bottom: 12px;
+ }
 
-        .link-section {
-            background: #000;
-            border: 2px dashed var(--primary-color);
-            padding: 25px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .link-section p {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-            color: var(--text-bright);
-        }
-        .brutal-btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: #000;
-            text-decoration: none;
-            padding: 12px 28px;
-            font-weight: bold;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0px var(--secondary-color);
-            transition: all 0.2s;
-        }
-        .brutal-btn:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px #fff;
-        }
+ .link-section {
+ background: #000;
+ border: 2px dashed var(--primary-color);
+ padding: 25px;
+ margin-top: 40px;
+ text-align: center;
+ }
+ .link-section p {
+ margin-bottom: 15px;
+ font-size: 1.05rem;
+ color: var(--text-bright);
+ }
+ .brutal-btn {
+ display: inline-block;
+ background: var(--primary-color);
+ color: #000;
+ text-decoration: none;
+ padding: 12px 28px;
+ font-weight: bold;
+ border: 2px solid #000;
+ box-shadow: 4px 4px 0px var(--secondary-color);
+ transition: all 0.2s;
+ }
+ .brutal-btn:hover {
+ transform: translate(-2px, -2px);
+ box-shadow: 6px 6px 0px #fff;
+ }
 
-        /* FAQ Section */
-        .faq-section {
-            margin-top: 50px;
-            border-top: 2px solid var(--text-bright);
-            padding-top: 30px;
-        }
-        .faq-title {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-            background: #1c2333;
-            padding: 20px;
-            border-left: 5px solid var(--secondary-color);
-        }
-        .faq-question {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: var(--text-bright);
-            margin-bottom: 8px;
-        }
-        .faq-answer {
-            font-size: 0.95rem;
-            color: var(--text-color);
-        }
+ /* FAQ Section */
+ .faq-section {
+ margin-top: 50px;
+ border-top: 2px solid var(--text-bright);
+ padding-top: 30px;
+ }
+ .faq-title {
+ font-size: 1.8rem;
+ color: var(--primary-color);
+ margin-bottom: 25px;
+ text-transform: uppercase;
+ }
+ .faq-item {
+ margin-bottom: 20px;
+ background: #1c2333;
+ padding: 20px;
+ border-left: 5px solid var(--secondary-color);
+ }
+ .faq-question {
+ font-weight: bold;
+ font-size: 1.1rem;
+ color: var(--text-bright);
+ margin-bottom: 8px;
+ }
+ .faq-answer {
+ font-size: 0.95rem;
+ color: var(--text-color);
+ }
 
-        footer {
-            margin-top: 60px;
-            border-top: var(--border-width) solid var(--border-color);
-            padding-top: 25px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #6a7185;
-        }
+ footer {
+ margin-top: 60px;
+ border-top: var(--border-width) solid var(--border-color);
+ padding-top: 25px;
+ text-align: center;
+ font-size: 0.85rem;
+ color: #6a7185;
+ }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .x-side-vjq9 {
-                padding: 20px;
-            }
-            .v-head-qopo-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .n-nav-6u62 {
-                width: 100%;
-            }
-            .n-nav-6u62-link {
-                flex-grow: 1;
-                text-align: center;
-                padding: 8px 12px;
-                font-size: 0.85rem;
-            }
-            .transit-line {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            .line-badge {
-                width: 100%;
-            }
-            .arrow {
-                transform: rotate(90deg);
-                display: inline-block;
-                margin-left: 15px;
-            }
-        }
-    </style>
+ @media (max-width: 768px) {
+ body {
+ padding: 10px;
+ }
+ .x-side-vjq9 {
+ padding: 20px;
+ }
+ .v-head-qopo-inner {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+ .n-nav-6u62 {
+ width: 100%;
+ }
+ .n-nav-6u62-link {
+ flex-grow: 1;
+ text-align: center;
+ padding: 8px 12px;
+ font-size: 0.85rem;
+ }
+ .transit-line {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 8px;
+ }
+ .line-badge {
+ width: 100%;
+ }
+ .arrow {
+ transform: rotate(90deg);
+ display: inline-block;
+ margin-left: 15px;
+ }
+ }
+ </style>
   <meta name="twitter:card" content="summary">
 </head>
 <body>
 
 <div class="x-side-vjq9">
-    <!-- Header & Navigation -->
-    <header class="v-head-qopo">
-        <div class="v-head-qopo-inner">
-            <div class="t-card-cjla">
-                <span>METRO TRENDS</span>
-            </div>
-            <nav class="n-nav-6u62">
-                <a href="index.html" class="n-nav-6u62-link">홈</a>
-                <a href="trend.html" class="n-nav-6u62-link active">트렌드</a>
-                <a href="analysis.html" class="n-nav-6u62-link">상권 분석</a>
-                <a href="grid.html" class="n-nav-6u62-link">그리드 맵</a>
-            </nav>
-        </div>
-    </header>
+ <!-- Header & Navigation -->
+ <header class="v-head-qopo">
+ <div class="v-head-qopo-inner">
+ <div class="t-card-cjla">
+ <span>METRO TRENDS</span>
+ </div>
+ <nav class="n-nav-6u62">
+ <a href="index.html" class="n-nav-6u62-link">홈</a>
+ <a href="trend.html" class="n-nav-6u62-link active">트렌드</a>
+ <a href="analysis.html" class="n-nav-6u62-link">상권 분석</a>
+ <a href="grid.html" class="n-nav-6u62-link">그리드 맵</a>
+ </nav>
+ </div>
+ </header>
 
-    <!-- Main Content -->
-    <main>
-        <section>
-            <p class="intro-text">
-                퇴근하고 나면 다들 어디로 향하시나요? 밤이 깊어질수록 서울의 에너지는 특정한 흐름을 타고 움직이곤 하죠. 오늘은 복잡하게 얽힌 서울 주요 지역의 <strong>유흥 상권 정보</strong>를 직관적인 '밤의 환승 노선도' 콘셉트로 정리해 봤어요. 각 상권이 가진 독특한 색깔과 유기적인 연결 흐름을 한눈에 살펴보실 수 있을 겁니다!
-            </p>
-        </section>
+ <!-- Main Content -->
+ <main>
+ <section>
+ <p class="intro-text">
+ 퇴근하고 나면 다들 어디로 향하시나요? 밤이 깊어질수록 서울의 에너지는 특정한 흐름을 타고 움직이곤 하죠. 오늘은 복잡하게 얽힌 서울 주요 지역의 <strong>유흥 상권 정보</strong>를 직관적인 '밤의 환승 노선도' 콘셉트로 정리해 봤어요. 각 상권이 가진 독특한 색깔과 유기적인 연결 흐름을 한눈에 살펴보실 수 있을 겁니다!
+ </p>
+ </section>
 
-        <!-- Night Transit Map Concept -->
-        <section class="transit-map-box">
-            <div class="transit-line">
-                <span class="line-badge">강남 순환선</span>
-                <span class="station">신사역 (가라오케)</span>
-                <span class="arrow">▶</span>
-                <span class="station">강남역 (셔츠룸)</span>
-                <span class="arrow">▶</span>
-                <span class="station">역삼·선릉 (비즈니스 룸)</span>
-            </div>
-            <div style="margin: 15px 0; border-left: 2px dashed var(--secondary-color); height: 20px; margin-left: 50px;"></div>
-            <div class="transit-line">
-                <span class="line-badge pink">여의도 급행선</span>
-                <span class="station">여의도역 (금융가 비즈니스)</span>
-                <span class="arrow">▶</span>
-                <span class="station">영등포역 (전통 상권)</span>
-                <span class="arrow">▶</span>
-                <span class="station">마포역 (식음료 연계)</span>
-            </div>
-        </section>
+ <!-- Night Transit Map Concept -->
+ <section class="transit-map-box">
+ <div class="transit-line">
+ <span class="line-badge">강남 순환선</span>
+ <span class="station">신사역 (가라오케)</span>
+ <span class="arrow">▶</span>
+ <span class="station">강남역 (셔츠룸)</span>
+ <span class="arrow">▶</span>
+ <span class="station">역삼·선릉 (비즈니스 룸)</span>
+ </div>
+ <div style="margin: 15px 0; border-left: 2px dashed var(--secondary-color); height: 20px; margin-left: 50px;"></div>
+ <div class="transit-line">
+ <span class="line-badge pink">여의도 급행선</span>
+ <span class="station">여의도역 (금융가 비즈니스)</span>
+ <span class="arrow">▶</span>
+ <span class="station">영등포역 (전통 상권)</span>
+ <span class="arrow">▶</span>
+ <span class="station">마포역 (식음료 연계)</span>
+ </div>
+ </section>
 
-        <section class="grid-container">
-            <!-- Card 1 -->
-            <div class="brutal-card">
-                <span class="brutal-badge">강남 라인</span>
-                <h3>밀집도 극대화의 중심</h3>
-                <p>강남권은 유흥 상권 정보 중에서도 가장 회전율이 빠르고 트렌드에 민감한 구역이에요. 신사동부터 역삼동까지 이어지는 흐름은 프라이빗한 비즈니스 모임과 캐주얼한 모임이 공존하는 독특한 생태계를 보여주죠.</p>
-                <p>특히 셔츠룸과 가라오케 등 다양한 업종이 그리드 단위로 촘촘하게 배치되어 있어 동선의 효율성이 매우 뛰어난 편이랍니다.</p>
-            </div>
+ <section class="grid-container">
+ <!-- Card 1 -->
+ <div class="brutal-card">
+ <span class="brutal-badge">강남 라인</span>
+ <h3>밀집도 극대화의 중심</h3>
+ <p>강남권은 유흥 상권 정보 중에서도 가장 회전율이 빠르고 트렌드에 민감한 구역이에요. 신사동부터 역삼동까지 이어지는 흐름은 프라이빗한 비즈니스 모임과 캐주얼한 모임이 공존하는 독특한 생태계를 보여주죠.</p>
+ <p>특히 셔츠룸과 가라오케 등 다양한 업종이 그리드 단위로 촘촘하게 배치되어 있어 동선의 효율성이 매우 뛰어난 편이랍니다.</p>
+ </div>
 
-            <!-- Card 2 -->
-            <div class="brutal-card">
-                <span class="brutal-badge">여의도 라인</span>
-                <h3>주중 비즈니스 맞춤형</h3>
-                <p>여의도는 철저히 주중 오피스 스케줄에 맞춰 움직이는 특성을 보여줘요. 금융업 종사자들의 비즈니스 미팅 비율이 높다 보니, 주말보다는 평일 저녁의 밀집도가 압도적으로 높게 나타납니다.</p>
-                <p>최근에는 마포 및 영등포 지역과의 연계성이 강화되면서 1차 식사 후 2차로 이동하는 환승 동선이 뚜렷해지고 있어요.</p>
-            </div>
+ <!-- Card 2 -->
+ <div class="brutal-card">
+ <span class="brutal-badge">여의도 라인</span>
+ <h3>주중 비즈니스 맞춤형</h3>
+ <p>여의도는 철저히 주중 오피스 스케줄에 맞춰 움직이는 특성을 보여줘요. 금융업 종사자들의 비즈니스 미팅 비율이 높다 보니, 주말보다는 평일 저녁의 밀집도가 압도적으로 높게 나타납니다.</p>
+ <p>최근에는 마포 및 영등포 지역과의 연계성이 강화되면서 1차 식사 후 2차로 이동하는 환승 동선이 뚜렷해지고 있어요.</p>
+ </div>
 
-            <!-- Card 3 -->
-            <div class="brutal-card">
-                <span class="brutal-badge">강북/마포 라기</span>
-                <h3>로컬 감성과 다양성</h3>
-                <p>홍대, 신촌, 마포로 이어지는 라인은 비교적 연령층이 낮고 캐주얼한 펍과 포차 형태의 업종이 주를 이룹니다. 하지만 마포역 인근은 중장년층 직장인을 타깃으로 한 전통적인 업종들이 탄탄하게 자리 잡고 있죠.</p>
-                <p>이처럼 하나의 노선 안에서도 구역마다 타깃 소비층이 완전히 갈리는 재미있는 현상을 볼 수 있답니다.</p>
-            </div>
-        </section>
+ <!-- Card 3 -->
+ <div class="brutal-card">
+ <span class="brutal-badge">강북/마포 라기</span>
+ <h3>로컬 감성과 다양성</h3>
+ <p>홍대, 신촌, 마포로 이어지는 라인은 비교적 연령층이 낮고 캐주얼한 펍과 포차 형태의 업종이 주를 이룹니다. 하지만 마포역 인근은 중장년층 직장인을 타깃으로 한 전통적인 업종들이 탄탄하게 자리 잡고 있죠.</p>
+ <p>이처럼 하나의 노선 안에서도 구역마다 타깃 소비층이 완전히 갈리는 재미있는 현상을 볼 수 있답니다.</p>
+ </div>
+ </section>
 
-        <!-- Internal Link Callout -->
-        <section class="link-section">
-            <p>각 지역별 구체적인 업종 분포와 수치화된 데이터가 궁금하신가요?</p>
-            <p style="font-size: 0.9rem; color: var(--primary-color); margin-bottom: 20px;">각 상권의 면적 대비 밀집도를 완벽하게 비교 분석한 리포트를 준비해 두었습니다.</p>
-            <a href="analysis.html" class="brutal-btn">상권 비교 분석 보러가기</a>
-        </section>
+ <!-- Internal Link Callout -->
+ <section class="link-section">
+ <p>각 지역별 구체적인 업종 분포와 수치화된 데이터가 궁금하신가요?</p>
+ <p style="font-size: 0.9rem; color: var(--primary-color); margin-bottom: 20px;">각 상권의 면적 대비 밀집도를 완벽하게 비교 분석한 리포트를 준비해 두었습니다.</p>
+ <a href="analysis.html" class="brutal-btn">상권 비교 분석 보러가기</a>
+ </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. 서울에서 유흥 상권 정보가 가장 빠르게 변하는 구역은 어디인가요?</div>
-                <div class="faq-answer">
-                    단연 강남권(신사, 역삼, 선릉)입니다. 트렌드 주기가 매우 짧기 때문에 매장의 콘셉트나 주력 업종이 몇 달 사이에 빠르게 전환되는 특성을 보입니다.
-                </div>
-            </div>
+ <!-- FAQ Section -->
+ <section class="faq-section">
+ <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
+ 
+ <div class="faq-item">
+ <div class="faq-question">Q. 서울에서 유흥 상권 정보가 가장 빠르게 변하는 구역은 어디인가요?</div>
+ <div class="faq-answer">
+ 단연 강남권(신사, 역삼, 선릉)입니다. 트렌드 주기가 매우 짧기 때문에 매장의 콘셉트나 주력 업종이 몇 달 사이에 빠르게 전환되는 특성을 보입니다.
+ </div>
+ </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Q. 평일과 주말의 상권 온도 차이가 가장 심한 곳은 어디인가요?</div>
-                <div class="faq-answer">
-                    여의도 상권이 대표적입니다. 전형적인 오피스 밀집 지역이라 주말에는 유동인구가 급격히 감소하는 경향이 있어, 주중 저녁 시간을 타깃으로 한 분석이 필수적입니다.
-                </div>
-            </div>
+ <div class="faq-item">
+ <div class="faq-question">Q. 평일과 주말의 상권 온도 차이가 가장 심한 곳은 어디인가요?</div>
+ <div class="faq-answer">
+ 여의도 상권이 대표적입니다. 전형적인 오피스 밀집 지역이라 주말에는 유동인구가 급격히 감소하는 경향이 있어, 주중 저녁 시간을 타깃으로 한 분석이 필수적입니다.
+ </div>
+ </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Q. 상권 정보를 파악할 때 가장 눈여겨봐야 할 요소는 무엇인가요?</div>
-                <div class="faq-answer">
-                    단순히 매장 수만 볼 것이 아니라, 지하철역 및 인근 오피스 지구와의 '연계 동선'을 보셔야 해요. 손님들이 1차 소비 후 어디로 흘러가는지 흐름을 파악하는 것이 핵심이랍니다.
-                </div>
-            </div>
-        </section>
-    </main>
+ <div class="faq-item">
+ <div class="faq-question">Q. 상권 정보를 파악할 때 가장 눈여겨봐야 할 요소는 무엇인가요?</div>
+ <div class="faq-answer">
+ 단순히 매장 수만 볼 것이 아니라, 지하철역 및 인근 오피스 지구와의 '연계 동선'을 보셔야 해요. 손님들이 1차 소비 후 어디로 흘러가는지 흐름을 파악하는 것이 핵심이랍니다.
+ </div>
+ </div>
+ </section>
+ </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 서울 유흥 상권 정보 트렌드 분석 블로그. All rights reserved.</p>
-        <p style="margin-top: 5px; font-size: 0.75rem;">본 사이트는 서울 주요 상권의 업종 밀집도와 트렌드를 객관적인 분석 관점에서 다루는 정보성 공간입니다.</p>
-    </footer>
+ <!-- Footer -->
+ <footer>
+ <p>© 2024 서울 유흥 상권 정보 트렌드 분석 블로그. All rights reserved.</p>
+ <p style="margin-top: 5px; font-size: 0.75rem;">본 사이트는 서울 주요 상권의 업종 밀집도와 트렌드를 객관적인 분석 관점에서 다루는 정보성 공간입니다.</p>
+ </footer>
 </div>
 
 </body>
