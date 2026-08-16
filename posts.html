@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 · t2-trend-sinsa-room-zone</title>
+  <meta name="description" content="t2-trend-sinsa-room-zone에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://trend.sinsa-room-zone.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --color-bg-primary: #0a0a0a; /* Dark background */
+ --color-text-primary: #e0e0e0; /* Light text */
+ --color-accent-blue: #00ffff; /* Electric blue for highlights */
+ --color-accent-red: #ff007f; /* Neon pink/red for danger/alert */
+ --color-border-dark: #333333; /* Darker border */
+ --font-family-primary: 'Arial', sans-serif;
+ --font-family-mono: 'SF Mono', 'Consolas', monospace;
+ --spacing-unit: 8px;
+ --header-height: 60px;
+ --border-thickness: 2px;
+ }
+
+ /* Reset & Base */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: var(--font-family-primary);
+ background-color: var(--color-bg-primary);
+ color: var(--color-text-primary);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ }
+
+ a {
+ color: var(--color-accent-blue);
+ text-decoration: none;
+ }
+
+ a:hover {
+ color: var(--color-accent-red);
+ }
+
+ /* Layout Container */
+ .x-side-vjq9 {
+ max-width: 1200px;
+ margin: var(--spacing-unit) auto;
+ padding: calc(var(--spacing-unit) * 3);
+ border: var(--border-thickness) solid var(--color-border-dark);
+ background-color: rgba(10, 10, 10, 0.9); /* Slightly transparent for depth */
+ flex-grow: 1;
+ }
+
+ /* Header & Navigation */
+ .v-head-qopo {
+ background-color: var(--color-bg-primary);
+ border-bottom: var(--border-thickness) solid var(--color-accent-blue);
+ padding: var(--spacing-unit) calc(var(--spacing-unit) * 3);
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+
+ .v-head-qopo-inner {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap; /* For responsiveness */
+ }
+
+ .t-card-cjla {
+ background-color: var(--color-bg-primary);
+ border: var(--border-thickness) solid var(--color-accent-red);
+ padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+ margin-bottom: var(--spacing-unit);
+ display: inline-block; /* For the main title */
+ font-family: var(--font-family-mono);
+ font-size: 1.2em;
+ color: var(--color-accent-red);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+ }
+ 
+ .t-card-cjla span {
+ color: var(--color-accent-blue);
+ }
+
+ .n-nav-6u62 {
+ display: flex;
+ gap: var(--spacing-unit);
+ flex-wrap: wrap;
+ margin-top: var(--spacing-unit); /* For smaller screens */
+ }
+
+ @media (min-width: 768px) {
+ .n-nav-6u62 {
+ margin-top: 0;
+ }
+ }
+
+ .n-nav-6u62-link {
+ display: block;
+ padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+ border: var(--border-thickness) solid var(--color-border-dark);
+ color: var(--color-text-primary);
+ text-transform: uppercase;
+ font-size: 0.9em;
+ transition: all 0.2s ease-in-out;
+ white-space: nowrap; /* Prevent wrapping */
+ }
+
+ .n-nav-6u62-link:hover,
+ .n-nav-6u62-link.active {
+ border-color: var(--color-accent-blue);
+ color: var(--color-accent-blue);
+ background-color: rgba(0, 255, 255, 0.1);
+ box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+ }
+
+ /* Additional styles for the "소개" page content */
+ .x-side-vjq9 h1 {
+ color: var(--color-accent-blue);
+ font-size: 2.5em;
+ margin-bottom: calc(var(--spacing-unit) * 3);
+ text-align: center;
+ text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+ border-bottom: var(--border-thickness) dashed var(--color-border-dark);
+ padding-bottom: var(--spacing-unit);
+ }
+
+ .x-side-vjq9 h2 {
+ color: var(--color-accent-red);
+ font-size: 1.8em;
+ margin-top: calc(var(--spacing-unit) * 4);
+ margin-bottom: calc(var(--spacing-unit) * 2);
+ border-left: var(--border-thickness) solid var(--color-accent-red);
+ padding-left: var(--spacing-unit);
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+
+ .x-side-vjq9 p {
+ margin-bottom: calc(var(--spacing-unit) * 2);
+ line-height: 1.8;
+ font-size: 1.1em;
+ }
+
+ .content-card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: calc(var(--spacing-unit) * 3);
+ margin-top: calc(var(--spacing-unit) * 4);
+ }
+
+ .content-card-grid .t-card-cjla {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: flex-start;
+ border-color: var(--color-accent-blue);
+ box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+ color: var(--color-text-primary);
+ background-color: rgba(0, 0, 0, 0.6); /* Darker background for cards */
+ padding: calc(var(--spacing-unit) * 2);
+ font-size: 1em; /* Adjust font size for card content */
+ text-transform: none;
+ letter-spacing: normal;
+ }
+
+ .content-card-grid .t-card-cjla h3 {
+ color: var(--color-accent-red);
+ font-size: 1.4em;
+ margin-bottom: var(--spacing-unit);
+ text-transform: uppercase;
+ border-bottom: 1px dashed var(--color-border-dark);
+ padding-bottom: calc(var(--spacing-unit) / 2);
+ width: 100%;
+ }
+
+ .content-card-grid .t-card-cjla p {
+ font-size: 1em;
+ margin-bottom: 0;
+ }
+
+ /* Responsive adjustments for the main content */
+ @media (max-width: 768px) {
+ .x-side-vjq9 {
+ padding: calc(var(--spacing-unit) * 2);
+ }
+ .x-side-vjq9 h1 {
+ font-size: 2em;
+ }
+ .x-side-vjq9 h2 {
+ font-size: 1.5em;
+ }
+ .x-side-vjq9 p {
+ font-size: 1em;
+ }
+ .content-card-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 · t2-trend-sinsa-room-zone">
+  <meta property="og:description" content="t2-trend-sinsa-room-zone에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://trend.sinsa-room-zone.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="v-head-qopo">
+ <div class="v-head-qopo-inner">
+ <div class="t-card-cjla">
+ 유흥 상권 <span>정보</span>
+ </div>
+ <nav class="n-nav-6u62">
+ <a href="index.html" class="n-nav-6u62-link">홈</a>
+ <a href="gangnam.html" class="n-nav-6u62-link">강남</a>
+ <a href="yeouido.html" class="n-nav-6u62-link">여의도</a>
+ <a href="gangbuk.html" class="n-nav-6u62-link">강북</a>
+ <a href="about.html" class="n-nav-6u62-link active">소개</a>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 14개</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-1st4wo0.html">유흥 상권 정보 현장에서 확인한 선택 기준과 주의점</a>
+        <p class="post-item__summary">서울은 지역마다 상권의 분위기와 방문객층이 명확하게 구분되는 특징을 지니고 있습니다. 강남, 홍대, 이태원, 건대 등 대표적인 지역들은 유동 인구의 연령대와 주요 이동 동선이 상이하므로 상권 정보를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-1q8pyit.html">룸살롱 마담이 숨겨둔 양주 원가와 마진의 불편한 진실</a>
+        <p class="post-item__summary">단골 노릇도 십 년을 넘기니, 이제는 술잔을 돌릴 때마다 그 안에 담긴 마진율이 훤히 보이는 병이 도졌습니다. 예전엔 그냥 취기가 좋았는데, 요즘은 룸 안의 분위기보다 테이블 위 조명에 비친 양주 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-ggeor.html">데이터마이닝으로 발굴한 유령 보스 3종, 컷된 진짜 이유는 &amp;#39;난이도&amp;#39;가 아니더군요 ^^</a>
+        <p class="post-item__summary">밤 11시, 2017년형 DELL 타워서버 팬 돌아가는 소리만 가득한 작업실에서 어떤 인디 개발자 녀석이 보낸 텔레그램 메시지 하나를 받았습니다. 내용인즉슨, 자기가 만든 게임이 스팀 출시 3일 만</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-bmjf91.html">강남역 인근 유흥 상권의 동선 효율과 시간 배분 전략</a>
+        <p class="post-item__summary">강남역 인근은 서울에서 가장 밀도 높은 유흥 상권이다. 대부분의 방문객은 단순히 인파에 휩쓸려 무의미하게 시간을 낭비한다. 전략 없는 유흥은 비용 대비 효용 가치를 떨어뜨리는 지름길이다. 이 일대를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-18zsa94.html">강남 유흥 상권 정보: 1972년 MK울트라 프로젝트와 파나마 페이퍼의 은밀한 연결</a>
+        <p class="post-item__summary">당신은 강남의 밤을 주름잡는 유흥 상권에 대해 얼마나 알고 있나요? 최근에 구글 트렌드에서 'MK울트라 프로젝트'와 관련된 검색어가 급등하고 있는데, 이 프로젝트와 강남 유흥 상권의 실제 연결점은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-1tzg3l2.html">정보 블로그 해결 방법 총정리</a>
+        <p class="post-item__summary">안녕하세요! 어떤 작업을 도와드릴까요? 구체적인 지시사항이나 요구사항을 입력해 주시면 감사하겠습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-gsejve.html">유흥 상권 정보 vs 유흥 상권 정보 비교</a>
+        <p class="post-item__summary">서울은 각 구역마다 상권의 분위기와 방문객층이 크게 다릅니다. 따라서 유흥 상권 정보를 미리 비교하고 분석하는 것은 효율적인 이동과 안전한 이용을 위해 매우 중요합니다. 주요 상권별 특성을 정확히 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-1xmxb2a.html">2억 원짜리 권리금 명세서에 숨겨진 그들만의 마진율 계산법</a>
+        <p class="post-item__summary">2018년 가을, 강남역 뒷골목에서 권리금 2억 원을 챙겨 떠난 김 사장의 실거래 내역서를 훑어보며 저는 쓴웃음을 지었습니다. 요즘 친구들은 권리금 액수만 보고 덜컥 계약서에 도장을 찍지만, 사실 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-14t30tz.html">강남 하드코어 유저들도 모르는, 1.0 패치 이전의 유령 구역을 아카이빙하다</a>
+        <p class="post-item__summary">다크소울 1편의 진짜 '첫 판'이 어떤 모습이었는지 혹시 기억나십니까? 아니, 기억이 아니라 데이터마이닝으로나마 들여다보신 적 있으세요? ^^ 요즘 친구들은 유튜브에 '소울류 히든 보스' 검색하면 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-rhi5qf.html">강남 유흥 상권 분석</a>
+        <p class="post-item__summary">2024년 11월 5일 화요일 밤 11시 23분, 강남역 11번 출구 앞. 평범한 화요일치고는 사람이 너무 많았어요. 아니, 정확히 말하면 '어떤 종류'의 사람들이 유난히 눈에 띄었죠. 한 손에는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-lussol.html">서울 상권의 위계와 유흥의 밀도</a>
+        <p class="post-item__summary">서울의 유흥 상권을 파악하는 기준은 의외로 단순하다. 얼마나 많은 사람이 좁은 골목에 밀집해 있는가, 그리고 그 인파가 지불하는 화폐의 속도가 얼마나 빠른가. 이 두 가지 변수만으로도 해당 지역의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-005-8ycibv.html">홍대 골목길에서 사장님 몰래 안주 원가율 계산하다가 깨달은 생존의 비밀 ^^</a>
+        <p class="post-item__summary">홍대 삼거리포차 근처에서 매일 밤 불야성을 이루던 그 힙한 어묵바가 2023년 늦가을에 왜 갑자기 문을 닫았는지 아십니까? ^^ 요즘 젊은 사장님들은 감성 인테리어와 인스타 릴스만 있으면 평생 갈 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-ws33tt.html">서울 유흥의 효율적 탐색을 위한 발렛 파킹 서비스의 가치 분석</a>
+        <p class="post-item__summary">강남권 주요 상권을 드나들 때 주차 문제는 시간 낭비의 결정체다. 좁은 이면 도로를 돌며 공간을 찾는 행위는 비효율의 극치이며, 운이 나쁘면 약속 시간을 지키지 못하는 참사로 이어진다. 대다수 이용</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-004-1bo5z7e.html">홍대 바닥에서 2억 받고 나간 놈과 빚만 남은 놈의 종이 한 장 차이</a>
+        <p class="post-item__summary">2023년 홍대 상권, 보증금 5천에 월세 450짜리 점포가 권리금 2억 2천에 거래됐습니다. 같은 블록, 비슷한 평수의 가게가 6개월을 버티지 못하고 보증금마저 까먹고 나간 것과는 극명한 대조를 </p>
+      </li>
+      </ul>
+
+    </main>
+  </div>
+</body>
+</html>
